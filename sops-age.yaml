@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  age.agekey: IyBjcmVhdGVkOiAyMDI0LTA4LTA2VDIzOjEyOjMxKzAyOjAwCiMgcHVibGljIGtleTogYWdlMWowZnFwc3dkOXFuanFxZ3N6dmZ6dThsbDl0OWtobnBnZGNmZnpwcHQyMzlnZXVxbXNwcHFmeGdnaGMKQUdFLVNFQ1JFVC1LRVktMTQwNTNKTU1YTllGTExIVlpNTUs4QUFETDhNWVVYV0FITEcwTk1XMkRVVVk2RERYR1cwTFFaR000NFgK
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: sops-age
+  namespace: flux-system

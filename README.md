@@ -134,6 +134,7 @@ sops --encrypt --in-place basic-auth.yaml
 ```
 age-keygen -o age.agekey
 ```
+* Remember to backup the age.agekey file to a secure secret store. If you need to recreate your clusters you need to have the private key available to be able to decrypt your secrets again.
 
 ## Generate secret manifest
 ```
