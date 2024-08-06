@@ -24,6 +24,7 @@ EOF
 The above configuration creates an rsa4096 key that does not expire.
 
 ## Retrieve GPG fingerprint
+* The key fingerprint just points to the actual rs4096 key
 ```
 gpg --list-secret-keys "${KEY_NAME}"
 
