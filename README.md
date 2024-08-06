@@ -38,6 +38,7 @@ export KEY_FP=1F3D1CED2F865F5E59CA564553241F147E7C5FA4
 ```
 
 ## Export public and private keypair from local GPG keyring and create k8s secret sops-gpg in flux-system namespace
+* --armor makes the private key readable in text
 ```
 gpg --export-secret-keys --armor "${KEY_FP}" |
 kubectl create secret generic sops-gpg \
