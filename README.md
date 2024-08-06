@@ -1,4 +1,5 @@
 # SOPS setup (Secret OPerationS)
+* Requires flux cluster
 
 ## Install packages
 * gnupg
@@ -20,6 +21,7 @@ Name-Comment: ${KEY_COMMENT}
 Name-Real: ${KEY_NAME}
 EOF
 ```
+The above configuration creates an rsa4096 key that does not expire.
 
 ## Retrieve GPG fingerprint
 ```
@@ -106,4 +108,46 @@ EOF
 * encrypted_regex helps encrypt the data and stringData fields for Secrets. (other fields e.g. kind or apiVersion is not supported by kustomize-controller)
 
 
+# Encryption with OpenPGP
 
+## Generate secret manifest
+```
+kubectl -n default create secret generic basic-auth \
+--from-literal=user=admin \
+--from-literal=password=change-me \
+--dry-run=client \
+-o yaml > basic-auth.yaml
+```
+
+## Encrypt with sops
+```
+sops --encrypt --in-place basic-auth.yaml
+```
+* Now you can git commit the secret
+
+# Encryption with age (RECOMMENDED)
+* Simple, modern alternative to openPGP
+
+## Generate a key
+```
+age-keygen -o age.agekey
+```
+
+## Generate secret manifest
+```
+cat age.agekey |
+kubectl create secret generic sops-age \
+--namespace=flux-system \
+--from-file=age.agekey=/dev/stdin
+```
+
+## Encrypt with sops
+```
+sops --age=age1helqcqsh9464r8chnwc2fzj8uv7vr5ntnsft0tn45v2xtz0hpfwq98cmsg \
+--encrypt --encrypted-regex '^(data|stringData)$' --in-place basic-auth.yaml
+```
+
+# Other SOPS encryption methods
+https://fluxcd.io/flux/guides/mozilla-sops/
+* Various cloud providers e.g. Azure vault
+* Hashicorp vault
