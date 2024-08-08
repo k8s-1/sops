@@ -1,7 +1,7 @@
 # Repository structure
 .
 └── .env
-└── .sops.yaml
+└── sops.yaml
 
 # Private key generation
 ```
