@@ -1,3 +1,5 @@
+# This is a testing repo. The encrypted "secrets" here are of no significance.
+
 # SOPS setup (Secret OPerationS)
 * Requires flux cluster
 
