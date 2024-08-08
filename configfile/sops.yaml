@@ -1,2 +1,3 @@
+# configuration file for sops, declare the age public key here
 creation_rules:
   - age: age1ejya532950vgjvqw9mr4z5kx5l7698x9ngg986ne8wpefazxnsmqq39mer
