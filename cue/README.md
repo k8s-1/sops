@@ -14,3 +14,5 @@ sops -e -i secret.enc.yaml
 ```
 cue import secret.enc.yaml # outputs secret.enc.cue
 ```
+
+### 4. Export as needed
