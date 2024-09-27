@@ -152,6 +152,12 @@ sops --age=age1helqcqsh9464r8chnwc2fzj8uv7vr5ntnsft0tn45v2xtz0hpfwq98cmsg \
 --encrypt --encrypted-regex '^(data|stringData)$' --in-place basic-auth.yaml
 ```
 
+## Decrypt
+```
+export SOPS_AGE_KEY_FILE=$(pwd)/age.agekey
+sops -d file.enc
+```
+
 # Other SOPS encryption methods
 https://fluxcd.io/flux/guides/mozilla-sops/
 * Various cloud providers e.g. Azure vault
