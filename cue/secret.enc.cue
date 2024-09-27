@@ -1,9 +1,7 @@
 apiVersion: "v1"
 data: key: "ENC[AES256_GCM,data:zS0+sA==,iv:5+xNefdgi6ziJVms2uZdHPO497vcP1uW8B1OB7Uu18M=,tag:WQNJMfUbZmnqzQOOZ8+ukg==,type:str]"
 kind: "Secret"
-metadata: {
-	name:              "test"
-}
+metadata: name: "test"
 sops: {
 	kms: []
 	gcp_kms: []
