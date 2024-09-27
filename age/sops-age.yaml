@@ -3,6 +3,5 @@ data:
   age.agekey: IyBjcmVhdGVkOiAyMDI0LTA4LTA2VDIzOjI1OjM3KzAyOjAwCiMgcHVibGljIGtleTogYWdlMXh6cHhtNWxoYTV1czJ4cDI2eG1qbno0anRxMDdxcTVyYzJ2aHY0N2FhNGxoZmEwZmF5NXNxNXdndWoKQUdFLVNFQ1JFVC1LRVktMUw5OUxKV0c4MFBQRVpEN01GRldERDY5OUU5WlhQRERDVVBONkZMTDRINUZKOFJIVTM1UFFFVVNXVFAK
 kind: Secret
 metadata:
-  creationTimestamp: null
   name: sops-age
   namespace: flux-system
