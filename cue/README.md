@@ -16,3 +16,9 @@ cue import secret.enc.yaml # outputs secret.enc.cue
 ```
 
 ### 4. Export as needed
+
+### 5. Decrypt
+```
+export SOPS_AGE_KEY_FILE=$(pwd)/age.agekey
+sops <key>
+```
