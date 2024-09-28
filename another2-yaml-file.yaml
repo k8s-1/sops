@@ -1,0 +1,18 @@
+example_booleans:
+    - ENC[AES256_GCM,data:KEvzYDg=,iv:g0u+o+LKv729cowJhEnyqWNvMoBml+iH3eD/VZJHUbU=,tag:aUNkGxDRHlw01afkZDLPRA==,type:bool]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault:
+        - vault_address: http://127.0.0.1:8200
+          engine_path: sops
+          key_name: firstkey
+          created_at: "2024-08-08T20:31:35Z"
+          enc: vault:v1:maVOK0LKNRNnRTXJFVruTTErgczh275uTtclH4YU82jPkmOxwSfZS/CdinYHA/eJGfEf1myRefvvMonZ3Y38AFAv1bLsBszzPtSCi/eaBu/hoFtnlXHnJyTRxAD2uvJyQeaBLtNtNz4aia/3SvEXQYQD7uUaVOD2meqRKPzqNl1Wosd6RU3f3aj2hza/C6P4dIu2uXadlajRzGzVhAY5yxvneBVYrRPfYofdHOonqonT+GAKzz7hnf+waw5vQ7C7NTKwlW7BpXfu/RoxGJIwSyzCi/Rv03UiyKgcktLodPtJQ4JMcOISW2Fwj3A6zMi/oagJ90MPF/1GRKKA4CNi2sUGdNkJsyepl0gZZ6XIu8XqHpFiYJwxyynj7pWIghDGkjyoOTl65qtmQkm7A0RHygC/NbZWXHYkrAJB8BRMmKb8alUVtVONeciLLNQDTic3gZiWUknVFp6kGqjwRpXwJNdLIt+pEfvbkdpvX3/8IZmbVj6Ujv2HdYFi0nbJD5U4OPnOgBc3wTaPedLBcEt3LMI4zcuT6bF5oTOi/M87B44w4nLu6aiAElZliIYHZXPFeIDtpUtUTKJl09J6qDFf1kI9SM1pBSyyGWp62emAUjzrQ2h0bc+rgn/E6Xtj+bwZTs6Ugv8ejTYT8sLQIzaRWpcoDi+1p0W9slQbQSUR+HE=
+    age: []
+    lastmodified: "2024-08-08T20:31:47Z"
+    mac: ENC[AES256_GCM,data:QYEFeJcDd1/VYNoyZWx7dLHEe8cCJKXoQKEz5l3G0ooZKPJcGzLZwoOs3Myj+4T3UTmpVTNTVcDQVrRId1SDra5+csZ/9E9iG0etoKql5zi1F1xmWpd7YZTLYuenRFy1bWpoYdJMjJAiNmdsBpxxNhCYG4q0XkHqKhx4tEnQtsU=,iv:qEmX6AXgIgT27VSuGkSuHKhRjyFMjd94jSvTqYPzXEg=,tag:z0JMx5Vr4eLIQhTJCQdNrA==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.9.0
